@@ -2,6 +2,7 @@ import React from 'react'
 import Container from './Container'
 import Logo from './Logo'
 import HeaderMenu from './HeaderMenu'
+import SearchBar from './SearchBar'
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
         <Logo/>
         <HeaderMenu/>
         <div>
-          Others
+          <SearchBar/>
         </div>
       </Container>
     </header>
