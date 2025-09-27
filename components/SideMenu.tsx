@@ -3,12 +3,14 @@ import Logo from "./Logo";
 import { X } from "lucide-react";
 import Link from "next/link";
 import { headerData } from "@/constants/data";
+import { usePathname } from "next/navigation";
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
 const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const pathname = usePathname();
   return (
     <div
       className={`fixed inset-y-0 h-screen left-0 z-50 w-full bg-black/50 text-white/80 shadow-xl ${
@@ -30,7 +32,9 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link
               href={item?.href}
               key={item?.title}
-              className="hover:text-shop_light_green hoverEffect"
+              className={`hover:text-shop_light_green hoverEffect ${
+                pathname === item?.href && "text-shop_light_green"
+              }`}
             >
               {item?.title}
             </Link>
