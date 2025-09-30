@@ -1,12 +1,14 @@
-import { Button } from '@/components/ui/button'
-import React from 'react'
+import Container from "@/components/Container";
+import HomeBanner from "@/components/HomeBanner";
+import { Button } from "@/components/ui/button";
+import React from "react";
 
 const page = () => {
   return (
-    <div className='p-10'>
-      <Button>Click Me</Button>
-    </div>
-  )
-}
+    <Container className="bg-shop-light-pink">
+      <HomeBanner/>
+    </Container>
+  );
+};
 
-export default page
+export default page;
