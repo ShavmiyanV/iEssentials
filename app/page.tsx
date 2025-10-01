@@ -5,7 +5,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <Container className="bg-shop-light-pink">
+    <Container className="">
       <HomeBanner/>
     </Container>
   );
