@@ -4,7 +4,7 @@ import FooterTop from "./FooterTop";
 import Logo from "./Logo";
 import SocialMedia from "./SocialMedia";
 import { SubText, SubTitle } from "./ui/text";
-import { quickLinksData } from "@/constants/data";
+import { categoriesData, quickLinksData } from "@/constants/data";
 import Link from "next/link";
 
 const Footer = () => {
@@ -30,12 +30,31 @@ const Footer = () => {
             <ul className="space-y-3 mt-4">
               {quickLinksData?.map((item) => (
                 <li key={item?.title}>
-                  <Link href={item?.href}>{item?.title}</Link>
+                  <Link
+                    href={item?.href}
+                    className="hover:text-shop_light_green hoverEffect font-medium"
+                  >
+                    {item?.title}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div></div>
+          <div>
+            <SubTitle>Categories</SubTitle>
+            <ul className="space-y-3 mt-4">
+              {categoriesData?.map((item) => (
+                <li key={item?.title}>
+                  <Link
+                    href={`/category/${item?.href}`}
+                    className="hover:text-shop_light_green hoverEffect font-medium"
+                  >
+                    {item?.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div></div>
         </div>
       </Container>
