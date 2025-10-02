@@ -9,10 +9,10 @@ const Footer = () => {
     <footer className="bg-white border-t">
       <Container>
         <FooterTop />
-        <div>
-          <div>
+        <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4">
             <Logo />
-            <p>
+            <p className="text-gray-600">
               Discover curated furniture collections at iEssentials, blending
               style and comfort to elevate your living spaces.
             </p>
