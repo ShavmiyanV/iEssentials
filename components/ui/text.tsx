@@ -19,7 +19,7 @@ const Title = ({
   );
 };
 
-const subText = ({
+const SubText = ({
   children,
   className,
 }: {
@@ -29,4 +29,4 @@ const subText = ({
   return <p className={cn("text-gray-600 text-sm", className)}>{children}</p>;
 };
 
-export { Title, subText };
+export { Title, SubText };
