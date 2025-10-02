@@ -3,7 +3,7 @@ import Container from "./Container";
 import FooterTop from "./FooterTop";
 import Logo from "./Logo";
 import SocialMedia from "./SocialMedia";
-import { SubText } from "./ui/text";
+import { SubText, SubTitle } from "./ui/text";
 
 const Footer = () => {
   return (
@@ -23,7 +23,9 @@ const Footer = () => {
               tooltipClassName="bg-darkColor text-white"
             />
           </div>
-          <div></div>
+          <div>
+            <SubTitle>Quick Links</SubTitle>
+          </div>
           <div></div>
           <div></div>
         </div>
