@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
 interface ContactItemData {
@@ -19,37 +19,39 @@ const data: ContactItemData[] = [
     title: "Call Us",
     subtitle: "0768816747",
     icon: (
-      <MapPin className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
+      <Phone className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),
   },
   {
     title: "Working Hours",
     subtitle: "Mon - Sat: 10:00 AM - 7:00 PM",
     icon: (
-      <MapPin className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
+      <Clock className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),
   },
   {
     title: "Email Us",
     subtitle: "shavmiyan16@gmail.com",
     icon: (
-      <MapPin className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
+      <Mail className="h-6 w-6 text-gray-600 group-hover:text-primary transition-colors" />
     ),
   },
 ];
 
 const FooterTop = () => {
-  return <div>
-    {data?.map((item,index) => (
-      <ContactItem/>
-    ))}
-  </div>;
+  return (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 border-b">
+      {data?.map((item, index) => (
+        <div key={index}>
+          {item?.icon}
+          <div>
+            <h3>{item?.title}</h3>
+            <p>{item?.subtitle}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 };
-
-const ContactItem = () => {
-  return <div>
-    <p></p>
-  </div>
-}
 
 export default FooterTop;
