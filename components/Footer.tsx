@@ -6,6 +6,8 @@ import SocialMedia from "./SocialMedia";
 import { SubText, SubTitle } from "./ui/text";
 import { categoriesData, quickLinksData } from "@/constants/data";
 import Link from "next/link";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
@@ -55,7 +57,17 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div></div>
+          <div className="space-y-4">
+            <SubTitle>News Letter</SubTitle>
+            <SubText>
+              Subscribe to our newsletter to receive updates and exclusive
+              offers.
+            </SubText>
+            <form className="space-y-3">
+              <Input placeholder="Enter your Email" type="email" required/>
+              <Button className="w-full">Subscribe</Button>
+            </form>
+          </div>
         </div>
       </Container>
     </footer>
