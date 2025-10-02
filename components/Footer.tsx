@@ -4,7 +4,7 @@ import FooterTop from "./FooterTop";
 
 const Footer = () => {
   return (
-    <footer className="mb-40" >
+    <footer className="bg-white border-t" >
       <Container>
         <FooterTop/>
       </Container>
