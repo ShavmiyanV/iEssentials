@@ -64,21 +64,15 @@ const Footer = () => {
               offers.
             </SubText>
             <form className="space-y-3">
-              <Input placeholder="Enter your Email" type="email" required/>
+              <Input placeholder="Enter your Email" type="email" required />
               <Button className="w-full">Subscribe</Button>
             </form>
           </div>
         </div>
         <div className="py-6  border-t text-center text-sm text-gray-600">
           <p>
-            © {new Date().getFullYear()}{" "}
-            <span className="text-darkColor font-black tracking-wider uppercase hover:text-shop_dark_green hoverEffect group font-sans">
-              i
-              <span className="text-shop_dark_green group-hover:text-darkColor hoverEffect">
-                Essentials
-              </span>
-            </span>
-            . All rights reserved.
+            © {new Date().getFullYear()} <Logo className="text-sm" />. All
+            rights reserved.
           </p>
         </div>
       </Container>
