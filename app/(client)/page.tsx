@@ -5,9 +5,11 @@ import React from "react";
 
 const page = () => {
   return (
-    <Container className="">
+    <Container className="bg-shop-light-pink">
       <HomeBanner/>
-      <ProductGrid/>
+      <div className="py-10">
+        <ProductGrid/>
+      </div>
     </Container>
   );
 };

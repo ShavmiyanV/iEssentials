@@ -1,9 +1,12 @@
-import React from 'react'
+"use client";
+
+import { useState } from "react";
 
 const ProductGrid = () => {
-  return (
-    <div>ProductGrid</div>
-  )
-}
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("");
+  return <div>ProductGrid</div>;
+};
 
-export default ProductGrid
+export default ProductGrid;
