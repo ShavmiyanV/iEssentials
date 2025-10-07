@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import HomeTabBar from "./HomeTabBar";
 import { productType } from "@/constants/data";
 import { client } from "@/sanity/lib/client";
+import { set } from "sanity";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,7 @@ const ProductGrid = () => {
       setLoading(true);
       try {
         const response = await client.fetch(query, params);
-        console.log(response);
+        setProducts(response);
       } catch (error) {
         console.error("Product fetching Error:", error);
       } finally {
