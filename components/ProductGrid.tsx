@@ -28,7 +28,7 @@ const ProductGrid = () => {
       }
     };
     fetchData();
-  });
+  }, [selectedTab]);
   return (
     <div>
       <HomeTabBar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
