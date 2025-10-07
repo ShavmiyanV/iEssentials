@@ -5,6 +5,7 @@ import HomeTabBar from "./HomeTabBar";
 import { productType } from "@/constants/data";
 import { client } from "@/sanity/lib/client";
 import { set } from "sanity";
+import { Divide } from "lucide-react";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -33,6 +34,10 @@ const ProductGrid = () => {
   return (
     <div>
       <HomeTabBar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
+      {loading ? <div className="">
+        
+
+      </div> : <>products</>}
     </div>
   );
 };
