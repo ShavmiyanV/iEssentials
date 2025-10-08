@@ -36,10 +36,10 @@ const ProductGrid = () => {
       <HomeTabBar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
       {loading ? (
         <div className="flex flex-col items-center justify-center py-10 min-h-80 gap-4 bg-gray-100 w-full mt-10">
-          <motion.div className="">
+          <div className="space-x-2 flex items-center text-blue-600">
             <Loader2 />
             <span>Product is loading...</span>
-          </motion.div>
+          </div>
         </div>
       ) : (
         <>products</>
