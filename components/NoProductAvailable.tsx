@@ -23,8 +23,15 @@ const NoProductAvailable = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        
+        <h2 className="text-2xl font-bold text-gray-800">
+            No Product Available
+        </h2>
       </motion.div>
+
+      <motion.p initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{delay: 0.2, duration: 0.5}}
+      className="text-gray-600"></motion.p>
     </div>
   );
 };
