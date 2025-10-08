@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import HomeTabBar from "./HomeTabBar";
 import { productType } from "@/constants/data";
 import { client } from "@/sanity/lib/client";
-import { set } from "sanity";
-import { Divide } from "lucide-react";
+import { motion } from "motion/react";
+import { Loader2 } from "lucide-react";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -34,10 +34,16 @@ const ProductGrid = () => {
   return (
     <div>
       <HomeTabBar selectedTab={selectedTab} onTabSelect={setSelectedTab} />
-      {loading ? <div className="">
-        
-
-      </div> : <>products</>}
+      {loading ? (
+        <div className="flex flex-col items-center justify-center py-10 min-h-80 gap-4 bg-gray-100 w-full mt-10">
+          <motion.div className="">
+            <Loader2 />
+            <span>Product is loading...</span>
+          </motion.div>
+        </div>
+      ) : (
+        <>products</>
+      )}
     </div>
   );
 };
