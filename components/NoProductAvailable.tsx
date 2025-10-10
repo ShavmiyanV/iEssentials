@@ -45,7 +45,13 @@ const NoProductAvailable = ({
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="flex items-center space-x-2 text-shop_dark_green"
-      ></motion.div>
+      >
+
+        <Loader2 className="w-5 h-5 animate-spin"/>
+        <span>We&apos;re restocking shortly</span>
+      </motion.div>
+
+      <motion.p></motion.p>
     </div>
   );
 };
