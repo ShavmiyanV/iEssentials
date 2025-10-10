@@ -51,7 +51,14 @@ const NoProductAvailable = ({
         <span>We&apos;re restocking shortly</span>
       </motion.div>
 
-      <motion.p></motion.p>
+      <motion.p initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{delay: 0.4, duration: 0.5}}
+      className="text-sm text-gray-500">
+        Please check back later or explore our other product categories.
+      </motion.p>
     </div>
   );
 };
+
+export default NoProductAvailable;  
