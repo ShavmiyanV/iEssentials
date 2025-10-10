@@ -24,14 +24,28 @@ const NoProductAvailable = ({
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-2xl font-bold text-gray-800">
-            No Product Available
+          No Product Available
         </h2>
       </motion.div>
 
-      <motion.p initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      transition={{delay: 0.2, duration: 0.5}}
-      className="text-gray-600"></motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="text-gray-600"
+      >
+        We&apos;re sorry, but there are no products available at this time.{" "}
+        <span className="text-base font-semibold text-darkColor">
+          {selectedTab}
+        </span>{" "}
+        criteria at the moment.
+      </motion.p>
+
+      <motion.div
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+        className="flex items-center space-x-2 text-shop_dark_green"
+      ></motion.div>
     </div>
   );
 };
