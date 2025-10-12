@@ -17,6 +17,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           />
         )}
       </div>
+      <div className="p-3">Product Details</div>
     </div>
   );
 };
