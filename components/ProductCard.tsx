@@ -6,7 +6,7 @@ import Image from "next/image";
 const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className="text-sm border-[1px] border-dark_blue/20 rounded-md bg-white group">
-      <div>
+      <div className="relative group overflow-hidden bg-shop_light_bg">
         {product?.images && (
           <Image
             src={urlFor(product?.images[0]).url()}
