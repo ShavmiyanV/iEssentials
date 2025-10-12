@@ -16,6 +16,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             height={700}
           />
         )}
+        {product?.status === "sale" && (<p>Sale!</p>)}
       </div>
       <div className="p-3">Product Details</div>
     </div>
