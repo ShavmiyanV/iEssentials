@@ -43,7 +43,9 @@ const ProductCard = ({ product }: { product: Product }) => {
           </Link>
         )}
       </div>
-      <div className="p-3">Product Details</div>
+      <div className="p-3">
+        {product?.categories && <p>{product?.categories?.map((cat) => cat).join(", ")}</p>}
+      </div>
     </div>
   );
 };
