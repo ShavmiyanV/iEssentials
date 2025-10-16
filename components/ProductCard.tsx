@@ -60,6 +60,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                 className={
                   index < 4 ? "text-shop_lighter_green" : "text-shop_light_text"
                 }
+                fill={index < 4 ? "#93d991" : "#ababab"}
               />
             ))}
           </div>
