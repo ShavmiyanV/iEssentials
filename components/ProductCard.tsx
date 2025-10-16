@@ -3,7 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Flame } from "lucide-react";
+import { Flame, StarIcon } from "lucide-react";
 import AddToWishListButton from "./AddToWishListButton";
 import { Title } from "./ui/text";
 
@@ -52,6 +52,18 @@ const ProductCard = ({ product }: { product: Product }) => {
           </p>
         )}
         <Title className="text-sm line-clamp-1">{product?.name}</Title>
+        <div>
+          <div>
+            {[...Array(5)].map((_, index) => (
+              <StarIcon
+                key={index}
+                className={
+                  index < 4 ? "text-shop_lighter_green" : "text-shop_light_text"
+                }
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
