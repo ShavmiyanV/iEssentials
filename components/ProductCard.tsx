@@ -58,7 +58,7 @@ const ProductCard = ({ product }: { product: Product }) => {
               <StarIcon
                 key={index}
                 className={
-                  index < 4 ? "text-shop_lighter_green" : "text-shop_light_text"
+                  index < 4 ? "text-shop_lighter_green" : "text-shop_lighter_text"
                 }
                 fill={index < 4 ? "#93d991" : "#ababab"}
               />
