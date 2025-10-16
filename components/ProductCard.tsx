@@ -56,14 +56,18 @@ const ProductCard = ({ product }: { product: Product }) => {
           <div>
             {[...Array(5)].map((_, index) => (
               <StarIcon
+                size={13}
                 key={index}
                 className={
-                  index < 4 ? "text-shop_lighter_green" : "text-shop_lighter_text"
+                  index < 4
+                    ? "text-shop_lighter_green"
+                    : "text-shop_lighter_text"
                 }
                 fill={index < 4 ? "#93d991" : "#ababab"}
               />
             ))}
           </div>
+          <p>5 Reviews</p>
         </div>
       </div>
     </div>
