@@ -17,6 +17,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             loading="lazy"
             width={700}
             height={700}
+            className={`w-full h-64 object-contain overflow-hidden transition-transform bg-shop_light_bg hoverEffect ${product?.stock !== 0 ? "group-hover:scale-105" : "opacity-50"}`}
           />
         )}
         <AddToWishListButton product={product} />
@@ -44,7 +45,9 @@ const ProductCard = ({ product }: { product: Product }) => {
         )}
       </div>
       <div className="p-3">
-        {product?.categories && <p>{product?.categories?.map((cat) => cat).join(", ")}</p>}
+        {product?.categories && (
+          <p>{product?.categories?.map((cat) => cat).join(", ")}</p>
+        )}
       </div>
     </div>
   );
