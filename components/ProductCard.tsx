@@ -52,11 +52,11 @@ const ProductCard = ({ product }: { product: Product }) => {
           </p>
         )}
         <Title className="text-sm line-clamp-1">{product?.name}</Title>
-        <div>
-          <div>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-0.5">
             {[...Array(5)].map((_, index) => (
               <StarIcon
-                size={13}
+                size={12}
                 key={index}
                 className={
                   index < 4
@@ -67,8 +67,11 @@ const ProductCard = ({ product }: { product: Product }) => {
               />
             ))}
           </div>
-          <p>5 Reviews</p>
+          <p className="text-shop_light_text text-xs tracking-wide">
+            5 Reviews
+          </p>
         </div>
+        <div></div>
       </div>
     </div>
   );
