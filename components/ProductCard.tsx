@@ -71,7 +71,14 @@ const ProductCard = ({ product }: { product: Product }) => {
             5 Reviews
           </p>
         </div>
-        <div></div>
+        <div className="flex items-center gap-2.5">
+          <p className="font-medium">In Stock</p>
+          <p
+            className={`text-shop_light_green/80 font-semibold ${product?.stock === 0 ? "text-red-600" : "text-shop_light_green font-semibold"}`}
+          >
+            {(product?.stock as number) > 0 ? product?.stock : "unavailable"}
+          </p>
+        </div>
       </div>
     </div>
   );
