@@ -1,9 +1,12 @@
-import React from 'react'
-
-const PriceView = () => {
-  return (
-    <div>PriceView</div>
-  )
+import React from "react";
+interface Props {
+  price: number | undefined;
+  discount: number | undefined;
+  className?: string;
 }
 
-export default PriceView
+const PriceView = () => {
+  return <div>PriceView</div>;
+};
+
+export default PriceView;
