@@ -1,17 +1,17 @@
 import Container from "@/components/Container";
 import HomeBanner from "@/components/HomeBanner";
+import HomeCategories from "@/components/HomeCategories";
 import ProductGrid from "@/components/ProductGrid";
 import React from "react";
 
-const page = () => {
+const Home = () => {
   return (
     <Container className="bg-shop-light-pink">
-      <HomeBanner/>
-      <div className="py-10">
-        <ProductGrid/>
-      </div>
+      <HomeBanner />
+      <ProductGrid />
+      <HomeCategories/>
     </Container>
   );
 };
 
-export default page;
+export default Home;
