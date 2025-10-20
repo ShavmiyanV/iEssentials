@@ -1,9 +1,22 @@
-import React from 'react'
+import { Product } from "@/sanity.types";
+import { ShoppingBag } from "lucide-react";
+import React from "react";
+import { Button } from "./ui/button";
 
-const AddToCartButton = () => {
-  return (
-    <div>AddToCartButton</div>
-  )
+interface Props {
+  product: Product;
+  className?: string;
 }
 
-export default AddToCartButton
+const AddToCartButton = ({ product, className }: Props) => {
+  const isOutOfStock = product?.stock === 0;
+  return (
+    <div>
+      <Button>
+        <ShoppingBag /> {isOutOfStock ? "Out of Stock" : "Add to Cart"}
+      </Button>
+    </div>
+  );
+};
+
+export default AddToCartButton;
