@@ -7,6 +7,7 @@ import { Flame, StarIcon } from "lucide-react";
 import AddToWishListButton from "./AddToWishListButton";
 import { Title } from "./ui/text";
 import PriceView from "./PriceView";
+import AddToCartButton from "./AddToCartButton";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -85,6 +86,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           discount={product?.discount}
           className="text-sm"
         />
+        <AddToCartButton product={product} className="w-36 rounded-full"/>
       </div>
     </div>
   );
