@@ -20,7 +20,10 @@ const ShopByBrands = async () => {
       </div>
       <div>
         {brands?.map((brand: any) => (
-          <Link href={`/brand/${brand?.slug?.current}`}>
+          <Link
+            href={`/brand/${brand?.slug?.current}`}
+            className="bg-white w-36 h-24 flex items-center justify-center rounded-md overflow-hidden hover:shadow-lg shadow-shop_dark_green/20 hoverEffect"
+          >
             {brand?.image && (
               <Image
                 src={urlFor(brand?.image).url()}
