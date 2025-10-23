@@ -2,6 +2,8 @@ import React from "react";
 import Title from "./Title";
 import Link from "next/link";
 import { getAllBrands } from "@/sanity/queries";
+import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
 
 const ShopByBrands = async () => {
   const brands = await getAllBrands();
@@ -17,9 +19,17 @@ const ShopByBrands = async () => {
         </Link>
       </div>
       <div>
-        {brands?.map((brand) => (
+        {brands?.map((brand: any) => (
           <Link href={`/brand/${brand?.slug?.current}`}>
-            
+            {brand?.image && (
+              <Image
+                src={urlFor(brand?.image).url()}
+                alt="brandImage"
+                width={250}
+                height={250}
+                className="w-32 h-20 object-contain"
+              />
+            )}
           </Link>
         ))}
       </div>
