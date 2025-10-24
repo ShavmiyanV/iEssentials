@@ -61,11 +61,22 @@ const ShopByBrands = async () => {
         ))}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16 p-2 shadow-sm shadow-shop_light_green/20 py-5">
-       {extraData?.map((item, index) => (
-        <div key={index} className="flex items-center gap-3 group text-shop_light_text hover:text-shop_light_green">
-          
-        </div>
-       ))}
+        {extraData?.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center gap-3 group text-shop_light_text hover:text-shop_light_green"
+          >
+            <span className="inline-flex scale-100 group-hover:scale-90 hoverEffect">
+              {item?.icon}
+            </span>
+            <div className="text-sm">
+              <p className="text-darkColor/80 font-bold capitalize">
+                {item?.title}
+              </p>
+              <p className="text-lightColor">{item?.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
