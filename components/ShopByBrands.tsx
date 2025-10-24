@@ -4,17 +4,30 @@ import Link from "next/link";
 import { getAllBrands } from "@/sanity/queries";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import { Truck } from "lucide-react";
-
+import { GitCompareArrows, Headset, ShieldCheck, Truck } from "lucide-react";
 
 const extraData = [
   {
     title: "Free Delivery",
     description: "Free shipping over $100",
-    icon: <Truck size={45}/>
-  }
-]
-
+    icon: <Truck size={45} />,
+  },
+  {
+    title: "Free Return",
+    description: "Free shipping over $100",
+    icon: <GitCompareArrows size={45} />,
+  },
+  {
+    title: "Customer Support",
+    description: "Friendly 24/7 customer support",
+    icon: <Headset size={45} />,
+  },
+  {
+    title: "Money Back Guarantee",
+    description: "Quality checked by our team",
+    icon: <ShieldCheck size={45} />,
+  },
+];
 
 const ShopByBrands = async () => {
   const brands = await getAllBrands();
