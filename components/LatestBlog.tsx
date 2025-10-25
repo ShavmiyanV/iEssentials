@@ -1,12 +1,13 @@
-import React from 'react'
-import Title from './Title'
+import React from "react";
+import Title from "./Title";
 
-const LatestBlog = () => {
+const LatestBlog = async () => {
+  const blogs = await getLatestBlogs();
   return (
-    <div className='mb-10 lg:mb-20'>
+    <div className="mb-10 lg:mb-20">
       <Title>Latest Blog</Title>
     </div>
-  )
-}
+  );
+};
 
-export default LatestBlog
+export default LatestBlog;
