@@ -1,8 +1,11 @@
 import React from 'react'
+import Title from './Title'
 
 const LatestBlog = () => {
   return (
-    <div>LatestBlog</div>
+    <div className='mb-10 lg:mb-20'>
+      <Title>Latest Blog</Title>
+    </div>
   )
 }
 
