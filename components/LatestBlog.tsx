@@ -35,6 +35,7 @@ const LatestBlog = async () => {
                       {item?.title}
                     </p>
                   ))}
+                  <span className="absolute left-0 -bottom-1.5 bg-lightColor/30 inline-block w-full h-[2px] group-hover:bg-shop_btn_dark_green hover:cursor-pointer hoverEffect"></span>
                 </div>
               </div>
             </div>
