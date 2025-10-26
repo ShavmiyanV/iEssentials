@@ -24,11 +24,16 @@ const LatestBlog = async () => {
                 />
               </Link>
             )}
-            <div>
-              <div>
-                <div>
+            <div className="bg-shop_light_bg p-5">
+              <div className="text-xs flex items-center gap-5">
+                <div className="flex items-center relative group cursor-pointer">
                   {blog?.blogcategories?.map((item, index) => (
-                    <p key={index}>{item?.title}</p>
+                    <p
+                      key={index}
+                      className="font-semibold text-shop_dark_green tracking-wider"
+                    >
+                      {item?.title}
+                    </p>
                   ))}
                 </div>
               </div>
