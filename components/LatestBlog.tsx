@@ -24,6 +24,15 @@ const LatestBlog = async () => {
                 />
               </Link>
             )}
+            <div>
+              <div>
+                <div>
+                  {blog?.blogcategories?.map((item, index) => (
+                    <p key={index}>{item?.title}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
