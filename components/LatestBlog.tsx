@@ -45,7 +45,12 @@ const LatestBlog = async () => {
                   <span className="absolute left-0 -bottom-1.5 bg-lightColor/30 inline-block w-full h-[2px] group-hover:bg-shop_dark_green hoverEffect" />
                 </p>
               </div>
-              <Link href={`/blog/${blog?.slug?.current}`}>{blog?.title}</Link>
+              <Link
+                href={`/blog/${blog?.slug?.current}`}
+                className="text-base font-semibold tracking-wide mt-5 line-clamp-2 hover:text-shop_dark_green hoverEffect"
+              >
+                {blog?.title}
+              </Link>
             </div>
           </div>
         ))}
