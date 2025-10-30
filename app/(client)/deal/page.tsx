@@ -1,17 +1,19 @@
-import Title from '@/components/Title';
-import { getDealProducts } from '@/sanity/queries'
-import { Container } from 'lucide-react';
-import React from 'react'
+import Title from "@/components/Title";
+import { getDealProducts } from "@/sanity/queries";
+import { Container } from "lucide-react";
+import React from "react";
 
 const DealPage = async () => {
-    const products = await getDealProducts();
+  const products = await getDealProducts();
   return (
-    <div>
-        <Container>
-            <Title>Hot Deals of the Week</Title>
-        </Container>
+    <div className="py-10 bg-shop_light_bg ">
+      <Container>
+        <Title className="mb-5 underline underline-offset-4 decoration-[1px] text-base uppercase tracking-wide">
+          Hot Deals of the Week
+        </Title>
+      </Container>
     </div>
-  )
-}
+  );
+};
 
-export default DealPage
+export default DealPage;
