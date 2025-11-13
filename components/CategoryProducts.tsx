@@ -1,9 +1,13 @@
-import React from 'react'
-
-const CategoryProducts = () => {
-  return (
-    <div>CategoryProducts</div>
-  )
+"use client";
+import { Category } from "@/sanity.types";
+import React from "react";
+interface Props {
+  categories: Category[];
+  slug: string;
 }
 
-export default CategoryProducts
+const CategoryProducts = () => {
+  return <div>CategoryProducts</div>;
+};
+
+export default CategoryProducts;
