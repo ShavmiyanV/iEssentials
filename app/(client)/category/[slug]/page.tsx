@@ -1,3 +1,4 @@
+import CategoryProducts from "@/components/CategoryProducts";
 import Title from "@/components/Title";
 import { getCategories } from "@/sanity/queries";
 import { Container } from "lucide-react";
@@ -19,6 +20,7 @@ const CategoryPage = async ({
             {slug && slug}
           </span>
         </Title>
+        <CategoryProducts categories={categories} slug={slug} />
       </Container>
     </div>
   );
